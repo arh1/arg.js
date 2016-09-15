@@ -90,6 +90,7 @@
       };
 
       // selector could be a number if we're at a numerical index leaf in which case selector.search is not valid
+      var toString = (selector).toString;
       if (typeof selector == 'string' || toString.call(selector) == '[object String]') {
         selectorBreak = selector.search(/[\.\[]/);
       }
